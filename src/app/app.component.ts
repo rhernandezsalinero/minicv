@@ -14,8 +14,8 @@ export class AppComponent {
   moon = faMoon
   sun = faSun
   isNightMode = false
-  rrss = [{ nombre: "GitHub", icon: faGithub, link: "" },
-  { nombre: "LinkedIn", icon: faLinkedin, link: "" }]
+  rrss = [{ nombre: "GitHub", icon: faGithub, link: "https://github.com/rhernandezsalinero" },
+  { nombre: "LinkedIn", icon: faLinkedin, link: "https://www.linkedin.com/in/rub%C3%A9n-hern%C3%A1ndez-salinero/" }]
 
   constructor(private renderer: Renderer2) { }
 
