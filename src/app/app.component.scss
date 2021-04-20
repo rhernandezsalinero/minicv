@@ -1,0 +1,99 @@
+@import "../styles";
+$mainShadow: -5px -5px 10px 3px rgb(204, 240, 204), 5px 5px 5px rgb(163, 197, 170);
+$darkShadow: -5px -5px 10px 3px #384d37, 5px 5px 5px #293128;
+.main-box {
+  max-width: 380px;
+  width: 100%;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+  text-align: center;
+  .avatar {
+    width: 154px;
+    height: 154px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow: $mainShadow;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 13px;
+  }
+  p {
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    .emoji {
+      font-size: 25px;
+    }
+  }
+  .box-item {
+    background-color: $bgWhite;
+    padding: 16px;
+    box-shadow: $mainShadow;
+    border-radius: 15px;
+    margin: 20px;
+    display: flex;
+    text-decoration: none;
+    color: $bgBlack;
+    transition: all 0.3s ease;
+    fa-icon {
+      font-size: 60px;
+    }
+    .left-item {
+      width: 40%;
+    }
+    .right-item {
+      width: 60%;
+      display: grid;
+      place-items: center flex-start;
+      p {
+        text-align: left;
+      }
+    }
+    &:hover {
+      color: $bgGrey;
+    }
+  }
+}
+
+.btn-up {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  border: 0px;
+  padding: 8px 24px;
+  background: $bgWhite;
+  border-radius: 22px;
+  transition: all 0.3s ease;
+  fa-icon {
+    font-size: 24px;
+  }
+  &:hover {
+    background-color: $bgBlack;
+    color: $bgWhite;
+  }
+}
+
+::ng-deep body.night {
+  background-color: $bgDarkBlue !important;
+  transition: all 0.3s ease;
+  .main-box.dark {
+    color: $bgWhite;
+    .box-item {
+      background-color: $bgDarkBlue !important;
+      color: $bgWhite !important;
+      box-shadow: $darkShadow !important;
+    }
+    .avatar{
+      box-shadow: $darkShadow !important;
+    }
+    .btn-up {
+      color: $bgWhite !important;
+      background-color: $bgDarkBlue !important;
+    }
+  }
+}

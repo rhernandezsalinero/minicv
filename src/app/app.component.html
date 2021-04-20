@@ -1,0 +1,24 @@
+<div class="main-box" [ngClass]="{'dark': isNightMode}">
+  <img class="avatar" src="../assets/images/Imagen.jpg" alt="Rubén Hernández Salinero">
+  <h1>Rubén Hernández Salinero</h1>
+
+  <p>Fullstack developer</p>
+  <p>Visita todos mis links oficiales</p>
+
+  <a *ngFor="let network of rrss" class="box-item" href="{{network.link}}">
+      <div class="left-item">
+          <fa-icon [icon]="network.icon"></fa-icon>
+      </div>
+      <div class="right-item">
+          <p>{{network.nombre}}</p>
+      </div>
+  </a>
+
+  <button type="button" class="btn-up" (click)="nightMode()">
+    <fa-icon *ngIf="!isNightMode" [icon]="moon"></fa-icon>
+    <fa-icon *ngIf="isNightMode" [icon]="sun"></fa-icon>
+  </button>
+</div>
+
+
+<router-outlet></router-outlet>
